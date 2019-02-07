@@ -1,7 +1,7 @@
 # Prep material for the [Azure 202 upgrade exam](https://www.microsoft.com/en-us/learning/exam-az-202.aspx)
 
 ## Skills measured
-1. Develop for cloud storage (15-20%)
+1. [Develop for cloud storage (15-20%)](https://github.com/jgoergen/Azure202Prep/tree/master/DevelopForCloudStorage)
 
   * Develop solutions that use file storage
   
@@ -17,7 +17,7 @@
      
      implement dynamic data masking
 
-2. Create Platform as a Service (PaaS) Solutions (30-35%)
+2. [Create Platform as a Service (PaaS) Solutions (30-35%)](https://github.com/jgoergen/Azure202Prep/tree/master/CreatePlatformAsAServiceSolutions)
 
   * Create an app service Logic App
   
@@ -61,19 +61,27 @@
     
     Manage container settings by using code
     
-3. Secure cloud solutions (5-10%)
+3. [Secure cloud solutions (5-10%)](https://github.com/jgoergen/Azure202Prep/tree/master/SecureCloudSolutions)
 
   * Implement access control
 
     Implement Claims-Based Access Control (CBAC) and Role-Based Access Control (RBAC) authorization
     
-4. Develop for an Azure cloud model (25-30%)
+4. [Develop for an Azure cloud model (25-30%)](https://github.com/jgoergen/Azure202Prep/tree/master/DevelopForAnAzureCloudModel)
 
   * Develop for autoscaling
 
-    Implement autoscaling rules and patterns (schedule, operational/system metrics, code that addresses singleton application instances, and code that addresses transient state
+    Implement autoscaling rules and patterns
+    
+    Schedule
+    
+    Operational / system metrics
+    
+    Code that addresses singleton application instances
+    
+    Code that addresses transient state
 
-5. Implement cloud integration solutions (15-20%)
+5. [Implement cloud integration solutions (15-20%)](https://github.com/jgoergen/Azure202Prep/tree/master/ImplementCloudIntegrationSolutions)
 
   * Configure a message-based integration architecture
 

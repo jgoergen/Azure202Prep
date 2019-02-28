@@ -101,4 +101,10 @@
     
     [Create topics and subscriptions](https://github.com/jgoergen/Azure202Prep/blob/master/ImplementCloudIntegrationSolutions/CreateTopicsAndSubscriptions.md)
     
+# Guides, practice exams, etc:
+https://devblogs.microsoft.com/premier-developer/az-202-microsoft-azure-developer-certification-transition-study-guide/
+
+https://www.whizlabs.com/blog/az-202-exam-preparation/
+
+https://www.braindumpsschool.com/microsoft/AZ-202-dumps.html
 

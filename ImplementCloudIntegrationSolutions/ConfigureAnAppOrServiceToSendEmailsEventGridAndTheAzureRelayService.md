@@ -1,20 +1,11 @@
 finish
 
-https://docs.microsoft.com/en-us/azure/event-grid/custom-event-quickstart
-
-https://docs.microsoft.com/en-us/azure/event-grid/custom-event-quickstart
-
-https://docs.microsoft.com/en-us/azure/event-grid/custom-event-quickstart-portal
-
-https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-event-quickstart-powershell?toc=%2fazure%2fevent-grid%2ftoc.json
-
+storage-blob-event-quickstart-powershell?toc=/azure/event-grid/toc.json
 https://docs.microsoft.com/en-us/azure/event-grid/resize-images-on-storage-blob-upload-event?tabs=dotnet
-
 https://docs.microsoft.com/en-us/azure/event-grid/monitor-virtual-machine-changes-event-grid-logic-app
-
-https://docs.microsoft.com/en-us/azure/event-grid/ensure-tags-exists-on-new-virtual-machines
-
-https://docs.microsoft.com/en-us/azure/event-grid/overview
+https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-event-quickstart?toc=%2fazure%2fevent-grid%2ftoc.json
+https://docs.microsoft.com/en-us/rest/api/eventgrid/
+https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-event-quickstart-powershell?toc=/azure/event-grid/toc.json
 
 
 # Configure an app or service to send emails, Event Grid, and the Azure Relay Service
@@ -32,6 +23,8 @@ https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-hybrid-connection
 https://docs.microsoft.com/en-us/azure/service-bus-relay/service-bus-dotnet-hybrid-app-using-service-bus-relay
 https://docs.microsoft.com/en-us/azure/service-bus-relay/service-bus-relay-rest-tutorial
 https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-authentication-and-authorization
+https://docs.microsoft.com/en-us/azure/event-grid/overview
+https://docs.microsoft.com/en-us/azure/event-grid/custom-event-quickstart
 
 ### Sending emails
 https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email
@@ -403,8 +396,48 @@ private static async Task RunAsync()
 
 * Event Grid supports dead-lettering for events that aren't delivered to an endpoint.
 
+* Topic names must be unique because they're represented by a DNS entry. They must be between 3-50 characters and contain only values a-z, A-Z, 0-9, and "-"
 
+* Blob storage events are available in general-purpose v2 storage accounts and Blob storage accounts.
 
+* If you haven't previously used Event Grid in your Azure subscription, you may need to register the Event Grid resource provider.
+
+  * In the Azure portal Select Subscriptions.
+  * Select the subscription you're using for Event Grid.
+  * Under Settings, select Resource providers.
+  * Find Microsoft.EventGrid.
+  * If not registered, select Register.
+
+* Currently, the following Azure services support sending events to Event Grid:
+  * Azure Subscriptions (management operations)
+  * Container Registry
+  * Custom Topics
+  * Event Hubs
+  * IoT Hub
+  * Media Services
+  * Resource Groups (management operations)
+  * Service Bus
+  * Storage Blob
+  * Storage General-purpose v2 (GPv2)
+
+* Currently, the following Azure services support handling events from Event Grid:
+  * Azure Automation
+  * Azure Functions
+  * Event Hubs
+  * Hybrid Connections
+  * Logic Apps
+  * Microsoft Flow
+  * Queue Storage
+  * WebHooks
+
+* here are five concepts in Azure Event Grid that let you get going:
+  * Events - What happened.
+  * Event sources - Where the event took place.
+  * Topics - The endpoint where publishers send events.
+  * Event subscriptions - The endpoint or built-in mechanism to route events, sometimes to more than one handler. Subscriptions are also used by handlers to intelligently filter incoming events.
+  * Event handlers - The app or service reacting to the event.
+
+* Azure Event Grid uses a pay-per-event pricing model, so you only pay for what you use. The first 100,000 operations per month are free. Operations are defined as event ingress, subscription delivery attempts, management calls, and filtering by subject suffix
 
 ### Quotas
 

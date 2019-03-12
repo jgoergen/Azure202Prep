@@ -1,13 +1,3 @@
-finish
-
-storage-blob-event-quickstart-powershell?toc=/azure/event-grid/toc.json
-https://docs.microsoft.com/en-us/azure/event-grid/resize-images-on-storage-blob-upload-event?tabs=dotnet
-https://docs.microsoft.com/en-us/azure/event-grid/monitor-virtual-machine-changes-event-grid-logic-app
-https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-event-quickstart?toc=%2fazure%2fevent-grid%2ftoc.json
-https://docs.microsoft.com/en-us/rest/api/eventgrid/
-https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-event-quickstart-powershell?toc=/azure/event-grid/toc.json
-
-
 # Configure an app or service to send emails, Event Grid, and the Azure Relay Service
 
 ## Reading material:
@@ -23,8 +13,6 @@ https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-hybrid-connection
 https://docs.microsoft.com/en-us/azure/service-bus-relay/service-bus-dotnet-hybrid-app-using-service-bus-relay
 https://docs.microsoft.com/en-us/azure/service-bus-relay/service-bus-relay-rest-tutorial
 https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-authentication-and-authorization
-https://docs.microsoft.com/en-us/azure/event-grid/overview
-https://docs.microsoft.com/en-us/azure/event-grid/custom-event-quickstart
 
 ### Sending emails
 https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email
@@ -33,6 +21,11 @@ https://sendgrid.com/docs/API_Reference/Web_API_v3/Mail/index.html
 ### Event Grid
 https://docs.microsoft.com/en-us/azure/event-grid/
 https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services
+https://docs.microsoft.com/en-us/azure/event-grid/overview
+https://docs.microsoft.com/en-us/azure/event-grid/custom-event-quickstart
+https://docs.microsoft.com/en-us/azure/storage/blobs/storage-upload-process-images?tabs=dotnet
+https://docs.microsoft.com/en-us/azure/event-grid/resize-images-on-storage-blob-upload-event?tabs=dotnet
+https://docs.microsoft.com/en-us/azure/event-grid/monitor-virtual-machine-changes-event-grid-logic-app
 
 ## Videos
 

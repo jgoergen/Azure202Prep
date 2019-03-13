@@ -1,9 +1,6 @@
 # Configure an app or service with Microsoft Graph
 
 finish
-
-https://docs.microsoft.com/en-us/graph/api/resources/users?view=graph-rest-1.0
-https://docs.microsoft.com/en-us/graph/auth-v2-user
 https://docs.microsoft.com/en-us/graph/auth-v2-service
 https://docs.microsoft.com/en-us/graph/office365-groups-concept-overview
 https://docs.microsoft.com/en-us/graph/use-the-api
@@ -15,7 +12,11 @@ https://docs.microsoft.com/en-us/graph/users-you-can-reach
 https://docs.microsoft.com/en-us/graph/overview-major-services
 https://docs.microsoft.com/en-us/graph/azuread-users-concept-overview
 https://docs.microsoft.com/en-us/graph/auth-overview
+https://docs.microsoft.com/en-us/graph/api/resources/users?view=graph-rest-1.0
+https://docs.microsoft.com/en-us/graph/auth-v2-user
 https://jwt.io/introduction/
+https://oauth.net/articles/authentication/
+https://auth0.com/docs/protocols/oidc
 
 ## Videos
 
@@ -26,6 +27,12 @@ Microsoft Graph is the gateway to data and intelligence in Microsoft 365. Micros
 
 ## What is Microsoft Graph Connect?
 Microsoft Graph Data Connect enables bulk - rather than the traditional transactional - access to Office 365 data.
+
+## What is Oath?
+OAuth 2.0 is an authorization framework, not an authentication protocol. You can think of this framework as a common denominator for authorization. Oauth2 was left generic so that it could be applied to many authorization requirements, like API access management or posting on someone’s wall.
+
+## What is OpenID Connect?
+OpenID Connect is a profile of OAuth 2.0 that defines a workflow for authentication. The big difference between OpenID Connect and OAuth2 is the id_token. There is no id_token defined in OAuth2 because the id_token is specific to federated authentication.
 
 ## Definitions
 1. Azure AD Access Token: Access tokens issued by Azure AD are base 64 encoded JSON Web Tokens (JWT). They contain information (claims) that web APIs secured by Azure AD, like Microsoft Graph, use to validate the caller and to ensure that the caller has the proper permissions to perform the operation they're requesting.
@@ -58,9 +65,16 @@ Microsoft Graph Data Connect enables bulk - rather than the traditional transact
 
 ### Microsoft Graph
 
-* Before your app can get a token from Azure AD, it must be registered. For the Azure AD v2.0 endpoint, you use the Microsoft App Registration Portal to register your app. For the Azure AD endpoint, you use the Azure portal.
+* Before your app can get a token from Azure AD, your app must be registered. For the Azure AD v2.0 endpoint, you use the Microsoft App Registration Portal to register your app. For the Azure AD endpoint, you use the Azure portal.
 
 * To call Microsoft Graph, your app must acquire an access token from Azure Active Directory (Azure AD), Microsoft's cloud identity service. The access token contains information (or claims) about your app and the permissions it has for the resources and APIs available through Microsoft Graph. To get an access token, your app must be able to authenticate with Azure AD and be authorized by either a user or an administrator for access to the Microsoft Graph resources it needs.
+
+* The basic steps required to use the OAuth 2.0 authorization code grant flow to get an access token from the Azure AD v2.0 endpoint are:
+
+  * Register your app with Azure AD.
+  * Get authorization.
+  * Call Microsoft Graph with the access token.
+  * Use a refresh token to get a new access token.
 
 * You attach the access token as a Bearer token to the Authorization header in an HTTP request. 
 
@@ -78,6 +92,16 @@ Microsoft Graph Data Connect enables bulk - rather than the traditional transact
   * Application permissions are used by apps that run without a user. These often grant an app broad privileges within an organization and always require the consent of an administrator.
 
 * Authenticating your application with admin consent enables you to work with and update a wider range of entities associated with a user.
+
+* You can access users through Microsoft Graph in two ways:
+
+  * By their ID, /users/{id | userPrincipalName}
+
+  * By using the /me alias for the signed-in user, which is the same as /users/{signed-in user's id}
+
+### OAuth 2
+
+Authentication in the context of a user accessing an application tells an application who the current user is and whether or not they're present. OAuth tells the application none of that. OAuth says absolutely nothing about the user, nor does it say how the user proved their presence or even if they're still there. As far as an OAuth client is concerned, it asked for a token, got a token, and eventually used that token to access some API. It doesn't know anything about who authorized the application or if there was even a user there at all. In fact, much of the point of OAuth is about giving this delegated access for use in situations where the user is not present on the connection between the client and the resource being accessed.
 
 ### JSON Web Tokens
 

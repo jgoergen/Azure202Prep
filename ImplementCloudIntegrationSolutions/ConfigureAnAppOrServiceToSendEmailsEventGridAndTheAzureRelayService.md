@@ -3,28 +3,45 @@
 ## Reading material:
 ### Azure Relay Service
 https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-what-is-it
+
 https://docs.microsoft.com/en-us/dotnet/framework/wcf/whats-wcf
+
 https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-wcf-dotnet-get-started
+
 https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas
+
 https://azure.microsoft.com/en-us/pricing/details/service-bus/
+
 https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-hybrid-connections-protocol
+
 https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-hybrid-connections-dotnet-get-started
+
 https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-hybrid-connections-http-requests-dotnet-get-started
+
 https://docs.microsoft.com/en-us/azure/service-bus-relay/service-bus-dotnet-hybrid-app-using-service-bus-relay
+
 https://docs.microsoft.com/en-us/azure/service-bus-relay/service-bus-relay-rest-tutorial
+
 https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-authentication-and-authorization
 
 ### Sending emails
 https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email
+
 https://sendgrid.com/docs/API_Reference/Web_API_v3/Mail/index.html
 
 ### Event Grid
 https://docs.microsoft.com/en-us/azure/event-grid/
+
 https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services
+
 https://docs.microsoft.com/en-us/azure/event-grid/overview
+
 https://docs.microsoft.com/en-us/azure/event-grid/custom-event-quickstart
+
 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-upload-process-images?tabs=dotnet
+
 https://docs.microsoft.com/en-us/azure/event-grid/resize-images-on-storage-blob-upload-event?tabs=dotnet
+
 https://docs.microsoft.com/en-us/azure/event-grid/monitor-virtual-machine-changes-event-grid-logic-app
 
 ## Videos

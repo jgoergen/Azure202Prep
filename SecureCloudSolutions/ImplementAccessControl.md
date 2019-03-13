@@ -2,10 +2,15 @@
 
 ## Reading material:
 https://docs.microsoft.com/en-us/azure/role-based-access-control/overview
+
 https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
+
 https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions
+
 https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles
+
 https://stackoverflow.com/questions/22814023/role-based-access-control-rbac-vs-claims-based-access-control-cbac-in-asp-n
+
 https://blogs.msdn.microsoft.com/usisvde/2012/03/13/windows-azure-security-best-practices-part-5-claims-based-identity-single-sign-on/
 
 ## Videos

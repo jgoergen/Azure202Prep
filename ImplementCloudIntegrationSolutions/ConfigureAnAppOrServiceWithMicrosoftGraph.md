@@ -1,21 +1,34 @@
 # Configure an app or service with Microsoft Graph
 
 finish
+
 https://docs.microsoft.com/en-us/graph/auth-v2-service
+
 https://docs.microsoft.com/en-us/graph/office365-groups-concept-overview
+
 https://docs.microsoft.com/en-us/graph/use-the-api
+
 https://docs.microsoft.com/en-us/graph/permissions-reference
 
 ## Reading material:
 https://docs.microsoft.com/en-us/graph/overview
+
 https://docs.microsoft.com/en-us/graph/users-you-can-reach
+
 https://docs.microsoft.com/en-us/graph/overview-major-services
+
 https://docs.microsoft.com/en-us/graph/azuread-users-concept-overview
+
 https://docs.microsoft.com/en-us/graph/auth-overview
+
 https://docs.microsoft.com/en-us/graph/api/resources/users?view=graph-rest-1.0
+
 https://docs.microsoft.com/en-us/graph/auth-v2-user
+
 https://jwt.io/introduction/
+
 https://oauth.net/articles/authentication/
+
 https://auth0.com/docs/protocols/oidc
 
 ## Videos

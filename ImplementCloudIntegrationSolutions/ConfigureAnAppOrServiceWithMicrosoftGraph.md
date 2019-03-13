@@ -2,6 +2,8 @@
 
 finish
 
+https://docs.microsoft.com/en-us/graph/auth-v2-user
+
 https://docs.microsoft.com/en-us/graph/auth-v2-service
 
 https://docs.microsoft.com/en-us/graph/office365-groups-concept-overview
@@ -31,6 +33,8 @@ https://oauth.net/articles/authentication/
 
 https://auth0.com/docs/protocols/oidc
 
+https://www.hcidata.info/base64.htm
+
 ## Videos
 
 ## What is Microsoft Graph?
@@ -48,11 +52,13 @@ OAuth 2.0 is an authorization framework, not an authentication protocol. You can
 OpenID Connect is a profile of OAuth 2.0 that defines a workflow for authentication. The big difference between OpenID Connect and OAuth2 is the id_token. There is no id_token defined in OAuth2 because the id_token is specific to federated authentication.
 
 ## Definitions
-1. Azure AD Access Token: Access tokens issued by Azure AD are base 64 encoded JSON Web Tokens (JWT). They contain information (claims) that web APIs secured by Azure AD, like Microsoft Graph, use to validate the caller and to ensure that the caller has the proper permissions to perform the operation they're requesting.
+1. Base64: Encoded data is a string of characters that contains only a-z, A-Z, 0-9, + and / characters and is often used in situations when sending non-text information via a text only transmission protocol. Base 64 Encoding takes a stream of characters and converts them to characters that belong to the universal ASCII character set. Once a stream of characters has been converted to characters that belong to the universal ASCII character set (Base 64 encoded) they can be transported with ease over the Internet.
 
-2. JSON Web Tokens: JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+2. Azure AD Access Token: Access tokens issued by Azure AD are base 64 encoded JSON Web Tokens (JWT). They contain information (claims) that web APIs secured by Azure AD, like Microsoft Graph, use to validate the caller and to ensure that the caller has the proper permissions to perform the operation they're requesting.
 
-3. Directory permissions: Directory permissions are highly privileged permissions and always require administrator consent.
+3. JSON Web Tokens: JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+
+4. Directory permissions: Directory permissions are highly privileged permissions and always require administrator consent.
 
 ## Misc notes
 
@@ -114,7 +120,7 @@ OpenID Connect is a profile of OAuth 2.0 that defines a workflow for authenticat
 
 ### OAuth 2
 
-Authentication in the context of a user accessing an application tells an application who the current user is and whether or not they're present. OAuth tells the application none of that. OAuth says absolutely nothing about the user, nor does it say how the user proved their presence or even if they're still there. As far as an OAuth client is concerned, it asked for a token, got a token, and eventually used that token to access some API. It doesn't know anything about who authorized the application or if there was even a user there at all. In fact, much of the point of OAuth is about giving this delegated access for use in situations where the user is not present on the connection between the client and the resource being accessed.
+* Authentication in the context of a user accessing an application tells an application who the current user is and whether or not they're present. OAuth tells the application none of that. OAuth says absolutely nothing about the user, nor does it say how the user proved their presence or even if they're still there. As far as an OAuth client is concerned, it asked for a token, got a token, and eventually used that token to access some API. It doesn't know anything about who authorized the application or if there was even a user there at all. In fact, much of the point of OAuth is about giving this delegated access for use in situations where the user is not present on the connection between the client and the resource being accessed.
 
 ### JSON Web Tokens
 
@@ -151,3 +157,18 @@ Authentication in the context of a user accessing an application tells an applic
     * Private claims: These are the custom claims created to share information between parties that agree on using them and are neither registered or public claims.
 
 * The third part is the Signature. To create the signature part you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that. The signature is used to verify the message wasn't changed along the way, and, in the case of tokens signed with a private key, it can also verify that the sender of the JWT is who it says it is.
+
+### Base64
+
+* Regarding the equal characters often seen in Base64 strings:
+  * The 65th character ("=" sign) is used only as a complement in the final process of encoding a message.
+
+    You will not have a '=' sign if your string has a multiple of 3 characters number, because Base64 encoding takes each three bytes (8bits) and represents them as four printable characters in the ASCII standard.
+
+    (a) If you want to encode ABCDEFG <=> [ABC] [DEF] [G
+
+    Base64 will deal(producing 4 characters) with the first block and the second (as they are complete) but for the third it will add a double == in the output in order to complete the 4 needed characters.Thus, the result will be QUJD REVG Rw== (without space)
+
+    (b) If you want to encode ABCDEFGH <=> [ABC] [DEF] [GH
+
+    Similarly, it will add just a single = in the end of the output to get 4 characters the result will be QUJD REVG R0g= (without space)

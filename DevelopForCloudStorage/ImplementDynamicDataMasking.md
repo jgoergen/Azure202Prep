@@ -1,2 +1,17 @@
 # Implement dynamic data masking
 
+## Reading material:
+
+## Videos
+
+## What is 
+
+## Definitions
+1. 
+
+## Misc notes
+
+### 
+
+### Quotas
+

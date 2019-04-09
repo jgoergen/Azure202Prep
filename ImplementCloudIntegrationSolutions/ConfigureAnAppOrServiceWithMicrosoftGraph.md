@@ -6,8 +6,6 @@ https://docs.microsoft.com/en-us/graph/auth-v2-user
 
 https://docs.microsoft.com/en-us/graph/auth-v2-service
 
-https://docs.microsoft.com/en-us/graph/office365-groups-concept-overview
-
 https://docs.microsoft.com/en-us/graph/use-the-api
 
 https://docs.microsoft.com/en-us/graph/permissions-reference
@@ -111,6 +109,8 @@ OpenID Connect is a profile of OAuth 2.0 that defines a workflow for authenticat
   * Application permissions are used by apps that run without a user. These often grant an app broad privileges within an organization and always require the consent of an administrator.
 
 * Authenticating your application with admin consent enables you to work with and update a wider range of entities associated with a user.
+
+* Microsoft Graph permission names follow a simple pattern: **resource.operation.constraint**. For example, User.Read grants permission to read the profile of the signed-in user, User.ReadWrite grants permission to read and modify the profile of the signed-in user, and Mail.Send grants permission to send mail on behalf of the signed-in user.
 
 * You can access users through Microsoft Graph in two ways:
 
